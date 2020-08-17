@@ -11,7 +11,7 @@ struct node_s{
 	int data;
 	node_t* prev;
 	node_t* next;
-	int is_dummy;
+	int is_dummy;/// indicates if the node is a dummy node for head and tail node for dlist and rear node for queue
 };
 
 node_t* node_init();

@@ -1,0 +1,105 @@
+\hypertarget{dlist_8h}{\section{dlist.\-h File Reference}
+\label{dlist_8h}\index{dlist.\-h@{dlist.\-h}}
+}
+{\ttfamily \#include $<$stdio.\-h$>$}\\*
+{\ttfamily \#include \char`\"{}error.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}node.\-h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structdlist__s}{dlist\-\_\-s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structdlist__s}{dlist\-\_\-s} \hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$ \hyperlink{dlist_8h_a84a878775176baa5d75c27b50ff996f9}{dlist\-\_\-init} ()
+\item 
+int \hyperlink{dlist_8h_a462e56cb98706a4b24c4dbf7d9be33e5}{dlist\-\_\-destroy} (\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$dlist)
+\begin{DoxyCompactList}\small\item\em destroy dlist\-\_\-t$\ast$  \hyperlink{dlist_8c_a462e56cb98706a4b24c4dbf7d9be33e5}{dlist\-\_\-destroy(dlist\-\_\-t$\ast$ dlist)} must be called after checking the consistency of target dlist\-\_\-t to ensure that there's no left node after calling \hyperlink{dlist_8c_a462e56cb98706a4b24c4dbf7d9be33e5}{dlist\-\_\-destroy(dlist\-\_\-t$\ast$ dlist)} \end{DoxyCompactList}\item 
+\hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$ \hyperlink{dlist_8h_a9a29a6fa58f1358f5973a1c6caefcbe3}{dlist\-\_\-get\-\_\-head} (\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$dlist)
+\item 
+\hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$ \hyperlink{dlist_8h_ab438e717d18ff23c755bb1260458138d}{dlist\-\_\-get\-\_\-tail} (\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$dlist)
+\item 
+int \hyperlink{dlist_8h_ac05c3846d4876a45892ed34b45a794bf}{dlist\-\_\-set\-\_\-head} (\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$dlist, \hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$node)
+\item 
+int \hyperlink{dlist_8h_a38b9dd1f38b84f44eab5789c305b2609}{dlist\-\_\-set\-\_\-tail} (\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$dlist, \hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$node)
+\item 
+int \hyperlink{dlist_8h_ada0d7690602f0184122dd1a833632c8f}{dlist\-\_\-clear\-\_\-dlist} (\hyperlink{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{dlist\-\_\-t} $\ast$dlist)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{dlist_8h_a118e5230e2ab0a9402a62415af13633d}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-t@{dlist\-\_\-t}}
+\index{dlist\-\_\-t@{dlist\-\_\-t}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf dlist\-\_\-s} {\bf dlist\-\_\-t}}}\label{dlist_8h_a118e5230e2ab0a9402a62415af13633d}
+
+
+\subsection{Function Documentation}
+\hypertarget{dlist_8h_ada0d7690602f0184122dd1a833632c8f}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-clear\-\_\-dlist@{dlist\-\_\-clear\-\_\-dlist}}
+\index{dlist\-\_\-clear\-\_\-dlist@{dlist\-\_\-clear\-\_\-dlist}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-clear\-\_\-dlist}]{\setlength{\rightskip}{0pt plus 5cm}int dlist\-\_\-clear\-\_\-dlist (
+\begin{DoxyParamCaption}
+\item[{{\bf dlist\-\_\-t} $\ast$}]{dlist}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_ada0d7690602f0184122dd1a833632c8f}
+\hypertarget{dlist_8h_a462e56cb98706a4b24c4dbf7d9be33e5}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-destroy@{dlist\-\_\-destroy}}
+\index{dlist\-\_\-destroy@{dlist\-\_\-destroy}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}int dlist\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf dlist\-\_\-t} $\ast$}]{dlist}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_a462e56cb98706a4b24c4dbf7d9be33e5}
+
+
+destroy dlist\-\_\-t$\ast$  \hyperlink{dlist_8c_a462e56cb98706a4b24c4dbf7d9be33e5}{dlist\-\_\-destroy(dlist\-\_\-t$\ast$ dlist)} must be called after checking the consistency of target dlist\-\_\-t to ensure that there's no left node after calling \hyperlink{dlist_8c_a462e56cb98706a4b24c4dbf7d9be33e5}{dlist\-\_\-destroy(dlist\-\_\-t$\ast$ dlist)} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dlist\-\_\-t$\ast$} & dlist \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+dlist check error on dlist; \hypertarget{dlist_8h_a9a29a6fa58f1358f5973a1c6caefcbe3}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-get\-\_\-head@{dlist\-\_\-get\-\_\-head}}
+\index{dlist\-\_\-get\-\_\-head@{dlist\-\_\-get\-\_\-head}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-get\-\_\-head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\-\_\-t}$\ast$ dlist\-\_\-get\-\_\-head (
+\begin{DoxyParamCaption}
+\item[{{\bf dlist\-\_\-t} $\ast$}]{dlist}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_a9a29a6fa58f1358f5973a1c6caefcbe3}
+\hypertarget{dlist_8h_ab438e717d18ff23c755bb1260458138d}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-get\-\_\-tail@{dlist\-\_\-get\-\_\-tail}}
+\index{dlist\-\_\-get\-\_\-tail@{dlist\-\_\-get\-\_\-tail}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-get\-\_\-tail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\-\_\-t}$\ast$ dlist\-\_\-get\-\_\-tail (
+\begin{DoxyParamCaption}
+\item[{{\bf dlist\-\_\-t} $\ast$}]{dlist}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_ab438e717d18ff23c755bb1260458138d}
+\hypertarget{dlist_8h_a84a878775176baa5d75c27b50ff996f9}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-init@{dlist\-\_\-init}}
+\index{dlist\-\_\-init@{dlist\-\_\-init}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf dlist\-\_\-t}$\ast$ dlist\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_a84a878775176baa5d75c27b50ff996f9}
+\hypertarget{dlist_8h_ac05c3846d4876a45892ed34b45a794bf}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-set\-\_\-head@{dlist\-\_\-set\-\_\-head}}
+\index{dlist\-\_\-set\-\_\-head@{dlist\-\_\-set\-\_\-head}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-set\-\_\-head}]{\setlength{\rightskip}{0pt plus 5cm}int dlist\-\_\-set\-\_\-head (
+\begin{DoxyParamCaption}
+\item[{{\bf dlist\-\_\-t} $\ast$}]{dlist, }
+\item[{{\bf node\-\_\-t} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_ac05c3846d4876a45892ed34b45a794bf}
+\hypertarget{dlist_8h_a38b9dd1f38b84f44eab5789c305b2609}{\index{dlist.\-h@{dlist.\-h}!dlist\-\_\-set\-\_\-tail@{dlist\-\_\-set\-\_\-tail}}
+\index{dlist\-\_\-set\-\_\-tail@{dlist\-\_\-set\-\_\-tail}!dlist.h@{dlist.\-h}}
+\subsubsection[{dlist\-\_\-set\-\_\-tail}]{\setlength{\rightskip}{0pt plus 5cm}int dlist\-\_\-set\-\_\-tail (
+\begin{DoxyParamCaption}
+\item[{{\bf dlist\-\_\-t} $\ast$}]{dlist, }
+\item[{{\bf node\-\_\-t} $\ast$}]{node}
+\end{DoxyParamCaption}
+)}}\label{dlist_8h_a38b9dd1f38b84f44eab5789c305b2609}
