@@ -1,6 +1,7 @@
 #ifndef __DLIST_H__
 #define __DLIST_H__
 
+#include <stdio.h>
 #include "error.h"
 #include "node.h"
 
@@ -10,6 +11,7 @@ struct dlist_s{
 	
 	node_t* head;
 	node_t* tail;
+	int is_dummy;
 	
 };
 

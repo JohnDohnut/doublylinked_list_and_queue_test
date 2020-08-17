@@ -11,6 +11,7 @@ struct node_s{
 	int data;
 	node_t* prev;
 	node_t* next;
+	int is_dummy;
 };
 
 node_t* node_init();
