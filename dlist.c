@@ -103,8 +103,9 @@ int dlist_set_tail(dlist_t* dlist, node_t* node){
 int dlist_delete_node(dlist_t* dlist, node_t*node){
 	if(dlist == NULL)
 		return PARAM_NULL;
-	if(dlist_check_consistency != NO_ERR)
+	if(dlist_check_consistency(dlist) != NO_ERR)
 		return DLIST_INCONSISTENT;
+
 	node_t* curr_node = dlist->head;
 	while(curr_node!=NULL){
 		if(curr_node == node)
@@ -261,7 +262,7 @@ int dlist_is_node_in_dlist(dlist_t* dlist, node_t* node){
 int dlist_swap_node(dlist_t* dlist, node_t* first, node_t* second){
 	if(dlist == NULL || first == NULL || second == NULL)
 		return PARAM_NULL;
-	if(dlist_check_consistency != NO_ERR)
+	if(dlist_check_consistency(dlist) != NO_ERR)
 		return DLIST_INCONSISTENT;
 	if(first == dlist->head || second == dlist-> head || first == dlist->tail || second == dlist->tail)
 		return MODIFY_HEAD;
@@ -288,12 +289,14 @@ int dlist_swap_node(dlist_t* dlist, node_t* first, node_t* second){
 	
 }
 
-dlist_t* dlist_add_50_test_nodes(dlist_t* dlist, int add){
+dlist_t* dlist_add_test_nodes(dlist_t* dlist,int num ,int add){
 	if(dlist == NULL)
+		return dlist;
+	if(num < 0)
 		return dlist;
 	node_t* new_node;
 	int i=add;
-	for(i=add+1;i<add+50;i++){
+	for(i=add+1;i<add+num;i++){
 		new_node = node_init();
 		new_node->data = i;
 		dlist_insert_node_to_tail(dlist,new_node);
@@ -333,7 +336,7 @@ void dlist_print_dlist(dlist_t* dlist){
 			printf("head => ");
 		}
 		else if(node == dlist->tail){
-			printf("tail\n",node->data);
+			printf("tail\n");
 		}
 		else{
 			printf("%d => ",node->data);
@@ -350,7 +353,7 @@ void dlist_print_dlist(dlist_t* dlist){
 */
 int main(int argc, char* argv[]){
 	dlist_t* dlist = dlist_init();
-	dlist_t* dlist_50 = dlist_init();
+/*	dlist_t* dlist_50 = dlist_init();
 	dlist_t* dlist_100 = dlist_init();
 
 	dlist_add_test_node(dlist);
@@ -366,7 +369,10 @@ int main(int argc, char* argv[]){
 	
 	dlist_destroy(dlist);
 	dlist_destroy(merged_dlist);
-	
+*/
+	dlist_add_test_nodes(dlist,10,0);
+	printf(" delete : %d\n",dlist_delete_node(dlist,dlist_search_node_by_data_from_tail(dlist,3)));
+	dlist_print_dlist(dlist);
 	return 0;
  	}
 
