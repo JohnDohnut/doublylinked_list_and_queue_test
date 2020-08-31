@@ -1,4 +1,4 @@
-#include "dlist.h"
+#include "dlist_void.h"
 /**
 *@fn int dlist_check_consistency(dlist_t* dlist)
 *@brief check consistency of dlist.
@@ -204,13 +204,18 @@ dlist_t* dlist_merge_dlist(dlist_t* headlist, dlist_t* taillist){
 *@param int data
 *@return node_t*
 */
-node_t* dlist_search_node_by_data_from_head(dlist_t* dlist, int data){
+node_t* dlist_search_node_by_data_from_head(dlist_t* dlist, void* data, int data_size){
 	if(dlist == NULL)
 		return NULL;
 	node_t* curr_node = dlist->head;
+	node_t* data_node = malloc(sizeof(node_t));
+	data_node -> data = data;
+	data_node -> data_size = data_size; 
 	while(curr_node != dlist->tail){
-		if(curr_node->data == data)
+		if(node_compare_data(curr_node,data_node) == 0){
+			free(data_node);
 			return curr_node;
+		}
 		curr_node = curr_node -> next;
 	}
 	return NULL;
@@ -222,13 +227,18 @@ node_t* dlist_search_node_by_data_from_head(dlist_t* dlist, int data){
 *@param int data
 *@return node_t*
 */
-node_t* dlist_search_node_by_data_from_tail(dlist_t* dlist, int data){
+node_t* dlist_search_node_by_data_from_tail(dlist_t* dlist, void* data, int data_size){
 	if(dlist == NULL)
 		return NULL;
 	node_t* curr_node = dlist->tail;
+	node_t* data_node = malloc(sizeof(node_t));
+	data_node -> data = data;
+	data_node -> data_size = data_size;
 	while(curr_node != dlist->head){
-		if(curr_node->data == data)
+		if(node_compare_data(curr_node,data_node) == 0){
+			free(data_node);
 			return curr_node;
+		}
 		curr_node = curr_node -> prev;
 	}
 	return NULL;
@@ -289,40 +299,7 @@ int dlist_swap_node(dlist_t* dlist, node_t* first, node_t* second){
 	
 }
 
-dlist_t* dlist_add_test_nodes(dlist_t* dlist,int num ,int add){
-	if(dlist == NULL)
-		return dlist;
-	if(num < 0)
-		return dlist;
-	node_t* new_node;
-	int i=add;
-	for(i=add+1;i<add+num;i++){
-		new_node = node_init();
-		new_node->data = i;
-		dlist_insert_node_to_tail(dlist,new_node);
-	}
-	return dlist;
-}
 
-dlist_t* dlist_add_test_node(dlist_t* dlist){
-	if(dlist == NULL){
-		return NULL;
-	}
-	node_t* new_node;
-	int i=0;
-	for(i=1;i<101;i++){
-		new_node = node_init();
-		new_node->data = i;
-		if(i%2 == 0){
-			
-			dlist_insert_node_to_head(dlist,new_node);
-		}
-		else{	
-			dlist_insert_node_to_tail(dlist,new_node);
-		}
-	}
-	return dlist;
-}
 /**
 *@fn void dlist_print_dlist(dlist_t* dlist)
 *@brief print dlist
@@ -339,7 +316,7 @@ void dlist_print_dlist(dlist_t* dlist){
 			printf("tail\n");
 		}
 		else{
-			printf("%d => ",node->data);
+			printf("%s => ",node->data);
 		}
 		node = node->next;
  	}
@@ -351,31 +328,36 @@ void dlist_print_dlist(dlist_t* dlist){
 *test code for init => add node => merge dlist => destroy
 *Head and tail nodes are dummy node, which is indicated by is_dummy member variable of struct node_s.
 */
+/*
 int main(int argc, char* argv[]){
 	dlist_t* dlist = dlist_init();
-/*	dlist_t* dlist_50 = dlist_init();
-	dlist_t* dlist_100 = dlist_init();
-
-	dlist_add_test_node(dlist);
-	dlist_add_50_test_nodes(dlist_50, 0);
-	dlist_add_50_test_nodes(dlist_100,50);
-
+	int i=0;
+	char* s[20];
+	node_t* node[20];
+	for(i=0;i<10;i++){
+		s[i] = malloc(5);
+		if(i%2 == 0){
+			strncpy(s[i],"a",5);		
+		}
+		else{
+			strncpy(s[i],"b",5);
+		}
+		node[i] = node_init();
+		node[i] -> data = s[i];
+		node[i]->data_size = 5;
+		dlist_insert_node_to_head(dlist, node[i]);			
+	}
+	printf("ErrCode : %d\n", dlist_insert_node_to_head(dlist,NULL));
+	printf("ErrCode : %d\n", dlist_insert_node_to_head(NULL, NULL));
+	printf("dlist[1] : %p\n", dlist->head->next);
+	printf("data search : %p\n", dlist_search_node_by_data_from_head(dlist,s[0],5));
+	printf("dlist[-1] : %p\n", dlist->tail->prev);
+	printf("data search : %p\n", dlist_search_node_by_data_from_tail(dlist,s[0],5));
 	dlist_print_dlist(dlist);
-	dlist_print_dlist(dlist_50);
-	dlist_print_dlist(dlist_100);
-	
-	dlist_t* merged_dlist = dlist_merge_dlist(dlist_50,dlist_100);
-
-	
 	dlist_destroy(dlist);
-	dlist_destroy(merged_dlist);
-*/
-	dlist_add_test_nodes(dlist,10,0);
-	printf(" delete : %d\n",dlist_delete_node(dlist,dlist_search_node_by_data_from_tail(dlist,3)));
-	dlist_print_dlist(dlist);
 	return 0;
- 	}
-
+}
+*/
 
 
 
