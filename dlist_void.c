@@ -19,15 +19,15 @@ int dlist_check_consistency(dlist_t* dlist){https://github.com/JohnDohnut/doubly
 	while(curr_node!=dlist->tail ){
 	
 		if(curr_node -> next == NULL){
-			printf("dlist is consistent, next of none tail node is NULL, node ptr : %p\n",curr_node);
+			//printf("dlist is consistent, next of none tail node is NULL, node ptr : %p\n",curr_node);
 			return DLIST_INCONSISTENT;
 		}
 		if(curr_node -> prev != prev_node){
-			printf("dlist is consistent, prev node not match, node ptr : %p \n",curr_node);
+			//printf("dlist is consistent, prev node not match, node ptr : %p \n",curr_node);
 			return DLIST_INCONSISTENT;
 		}
 		if(curr_node->next->prev != curr_node){
-			printf("dlist is consistent, prev of next node is not current node, node ptr : %p, node data : %d\n",curr_node, curr_node->data);
+			//printf("dlist is consistent, prev of next node is not current node, node ptr : %p, node data : %d\n",curr_node, curr_node->data);
 			return DLIST_INCONSISTENT;
 		}
 		prev_node = curr_node;
@@ -316,7 +316,7 @@ void dlist_print_dlist(dlist_t* dlist){
 			printf("tail\n");
 		}
 		else{
-			printf("%s => ",node->data);
+			printf("%p => ",node->data);
 		}
 		node = node->next;
  	}
