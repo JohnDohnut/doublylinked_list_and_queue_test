@@ -159,7 +159,7 @@ int main(){
 	test_node = dlist->head;
 	dlist_print_dlist(dlist);
 	
-	//merge 2 dlist
+	//merge two dlists
 	dlist_t* dlist2 = dlist_init();
 	if(dlist2 == NULL){
 		printf("dlist2 NULL\n");
@@ -182,7 +182,7 @@ int main(){
 	dlist_print_dlist(new_dlist);
 	//check swap node
 	rv = dlist_swap_node(new_dlist, new_dlist->head, new_dlist->tail);
-	if(rv != NO_ERR)//modifying head and tail through dlist_swap_node() is forbidden.
+	if(rv != NO_ERR)//modifying head and tail using dlist_swap_node() is forbidden.
 		printf("dlist_swap_node, rv : %d\n",rv);
 	rv = dlist_swap_node(new_dlist, new_dlist->head->next, new_dlist->tail->prev);
 	rv = dlist_check_consistency(new_dlist);
