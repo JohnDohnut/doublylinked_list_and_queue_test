@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>C Doubly linked list and queue test: node.c File Reference</title>
+<title>Doubly linkekd list and queue test: node.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">C Doubly linked list and queue test
+   <div id="projectname">Doubly linkekd list and queue test
    </div>
   </td>
  </tr>
@@ -37,7 +37,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li><a href="annotated.html"><span>Classes</span></a></li>
       <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -68,7 +67,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -85,28 +84,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">node.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="node_8h_source.html">node.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;node.h&quot;</code><br/>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ad92f768c29e69286f75277d1c66a1f1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ad92f768c29e69286f75277d1c66a1f1c">node_init</a> ()</td></tr>
+<tr class="memitem:ad92f768c29e69286f75277d1c66a1f1c"><td class="memItemLeft" align="right" valign="top">node_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ad92f768c29e69286f75277d1c66a1f1c">node_init</a> ()</td></tr>
 <tr class="separator:ad92f768c29e69286f75277d1c66a1f1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aade3ed4a3b24ce4af632d38e61c73d8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#aade3ed4a3b24ce4af632d38e61c73d8a">node_destroy</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node)</td></tr>
+<tr class="memitem:aade3ed4a3b24ce4af632d38e61c73d8a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#aade3ed4a3b24ce4af632d38e61c73d8a">node_destroy</a> (node_t *node)</td></tr>
 <tr class="separator:aade3ed4a3b24ce4af632d38e61c73d8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa028c4eae280f5dea49706af37d25b5d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#aa028c4eae280f5dea49706af37d25b5d">node_get_data</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node)</td></tr>
-<tr class="separator:aa028c4eae280f5dea49706af37d25b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9671b9275ede655dd677aff867a6632e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a9671b9275ede655dd677aff867a6632e">node_get_next</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node)</td></tr>
+<tr class="memitem:a1d0505349032f541c105e60ca0ab2c6b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a1d0505349032f541c105e60ca0ab2c6b">node_get_data</a> (node_t *node)</td></tr>
+<tr class="separator:a1d0505349032f541c105e60ca0ab2c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e4fca28ad82ab912c91b83f4eb380bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a0e4fca28ad82ab912c91b83f4eb380bb">node_get_data_size</a> (node_t *node)</td></tr>
+<tr class="separator:a0e4fca28ad82ab912c91b83f4eb380bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9671b9275ede655dd677aff867a6632e"><td class="memItemLeft" align="right" valign="top">node_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a9671b9275ede655dd677aff867a6632e">node_get_next</a> (node_t *node)</td></tr>
 <tr class="separator:a9671b9275ede655dd677aff867a6632e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7b8e84ddf42ba664325d8bccdc1b1d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#af7b8e84ddf42ba664325d8bccdc1b1d6">node_get_prev</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node)</td></tr>
+<tr class="memitem:af7b8e84ddf42ba664325d8bccdc1b1d6"><td class="memItemLeft" align="right" valign="top">node_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#af7b8e84ddf42ba664325d8bccdc1b1d6">node_get_prev</a> (node_t *node)</td></tr>
 <tr class="separator:af7b8e84ddf42ba664325d8bccdc1b1d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d654380f6018520abdc325d31c0beb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a7d654380f6018520abdc325d31c0beb2">node_set_data</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node, int data)</td></tr>
-<tr class="separator:a7d654380f6018520abdc325d31c0beb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99f0fb490c1abd7eab1976ed53651a4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a99f0fb490c1abd7eab1976ed53651a4c">node_set_prev</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node, <a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *prev)</td></tr>
+<tr class="memitem:ade03df54af4ac2c34475dc7bd240824a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ade03df54af4ac2c34475dc7bd240824a">node_set_data</a> (node_t *node, void *data, int size)</td></tr>
+<tr class="separator:ade03df54af4ac2c34475dc7bd240824a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99f0fb490c1abd7eab1976ed53651a4c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#a99f0fb490c1abd7eab1976ed53651a4c">node_set_prev</a> (node_t *node, node_t *prev)</td></tr>
 <tr class="separator:a99f0fb490c1abd7eab1976ed53651a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0b528b6b48f19e5d701cbb7a1421c69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ab0b528b6b48f19e5d701cbb7a1421c69">node_set_next</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node, <a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *next)</td></tr>
+<tr class="memitem:ab0b528b6b48f19e5d701cbb7a1421c69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ab0b528b6b48f19e5d701cbb7a1421c69">node_set_next</a> (node_t *node, node_t *next)</td></tr>
 <tr class="separator:ab0b528b6b48f19e5d701cbb7a1421c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad39b3295edccedb478f2347abfd79e05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ad39b3295edccedb478f2347abfd79e05">node_clear_node</a> (<a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *node)</td></tr>
+<tr class="memitem:ad39b3295edccedb478f2347abfd79e05"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ad39b3295edccedb478f2347abfd79e05">node_clear_node</a> (node_t *node)</td></tr>
 <tr class="separator:ad39b3295edccedb478f2347abfd79e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af496921ae87e1f93f9b8630f54de9eb1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#af496921ae87e1f93f9b8630f54de9eb1">node_compare_data</a> (node_t *node1, node_t *node2)</td></tr>
+<tr class="separator:af496921ae87e1f93f9b8630f54de9eb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad17f76a340542980ae270fb4fe5441e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="node_8c.html#ad17f76a340542980ae270fb4fe5441e0">node_print_node</a> (node_t *node)</td></tr>
+<tr class="separator:ad17f76a340542980ae270fb4fe5441e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a class="anchor" id="ad39b3295edccedb478f2347abfd79e05"></a>
@@ -116,9 +121,35 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int node_clear_node </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af496921ae87e1f93f9b8630f54de9eb1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int node_compare_data </td>
+          <td>(</td>
+          <td class="paramtype">node_t *&#160;</td>
+          <td class="paramname"><em>node1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">node_t *&#160;</td>
+          <td class="paramname"><em>node2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -132,7 +163,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int node_destroy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -141,14 +172,30 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa028c4eae280f5dea49706af37d25b5d"></a>
+<a class="anchor" id="a1d0505349032f541c105e60ca0ab2c6b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int node_get_data </td>
+          <td class="memname">void* node_get_data </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a0e4fca28ad82ab912c91b83f4eb380bb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int node_get_data_size </td>
+          <td>(</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -162,9 +209,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a>* node_get_next </td>
+          <td class="memname">node_t* node_get_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -178,9 +225,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a>* node_get_prev </td>
+          <td class="memname">node_t* node_get_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em></td><td>)</td>
           <td></td>
         </tr>
@@ -194,7 +241,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a>* node_init </td>
+          <td class="memname">node_t* node_init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -204,21 +251,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a7d654380f6018520abdc325d31c0beb2"></a>
+<a class="anchor" id="ad17f76a340542980ae270fb4fe5441e0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void node_print_node </td>
+          <td>(</td>
+          <td class="paramtype">node_t *&#160;</td>
+          <td class="paramname"><em>node</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ade03df54af4ac2c34475dc7bd240824a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">int node_set_data </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>data</em>&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -237,13 +306,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int node_set_next </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>next</em>&#160;</td>
         </tr>
         <tr>
@@ -263,13 +332,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int node_set_prev </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>node</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">node_t</a> *&#160;</td>
+          <td class="paramtype">node_t *&#160;</td>
           <td class="paramname"><em>prev</em>&#160;</td>
         </tr>
         <tr>

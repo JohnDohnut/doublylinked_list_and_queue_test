@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: node_s Struct Reference</title>
+<title>My Project: error.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -37,8 +37,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
-      <li><a href="files.html"><span>Files</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,11 +59,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   </div>
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
-      <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
-      <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
+      <li><a href="files.html"><span>File&#160;List</span></a></li>
     </ul>
   </div>
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -78,39 +77,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
-  <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="structnode__s-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">node_s Struct Reference</div>  </div>
+<div class="title">error.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aa299569154c5d785262de31caf489f84"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa299569154c5d785262de31caf489f84"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>is_dummy</b></td></tr>
-<tr class="separator:aa299569154c5d785262de31caf489f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae97adf7c1d652aa8b4fe84cbcdcaea9b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae97adf7c1d652aa8b4fe84cbcdcaea9b"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structnode__s.html#ae97adf7c1d652aa8b4fe84cbcdcaea9b">data</a></td></tr>
-<tr class="memdesc:ae97adf7c1d652aa8b4fe84cbcdcaea9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">indicates if the node is a dummy node for head and tail node for dlist and rear node for queue <br/></td></tr>
-<tr class="separator:ae97adf7c1d652aa8b4fe84cbcdcaea9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c95f32344f20d705d184461ae11d626"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9c95f32344f20d705d184461ae11d626"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>data_size</b></td></tr>
-<tr class="separator:a9c95f32344f20d705d184461ae11d626"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af63f2c2c1d16037022a14eacd1abf713"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af63f2c2c1d16037022a14eacd1abf713"></a>
-<a class="el" href="structnode__s.html">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>prev</b></td></tr>
-<tr class="separator:af63f2c2c1d16037022a14eacd1abf713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a6b703d87cda099a7dc7dc1dbcae9d7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5a6b703d87cda099a7dc7dc1dbcae9d7"></a>
-<a class="el" href="structnode__s.html">node_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
-<tr class="separator:a5a6b703d87cda099a7dc7dc1dbcae9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="node_8h_source.html">node.h</a></li>
-</ul>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ERROR_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __ERROR_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;errno.h&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> errors_s errors_t;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">enum</span> errors_s{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    NO_ERR = 0,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    DATA_SAME = 0,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    PARAM_NULL = -1,</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    DLIST_INCONSISTENT = -2,</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    QUEUE_INCONSISTENT = -2,</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    MODIFY_HEAD = -3,</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    MODIFY_TAIL = -3,</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    SWAP_SAME_NODE = -4,</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    NODE_NOT_IN_DLIST = -5,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    NO_NODE_FOUND = -6,</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    DATA_NOT_SAME = -7,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    NEGATIVE_SIZE = -8,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    UNKNOWN</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif </span></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

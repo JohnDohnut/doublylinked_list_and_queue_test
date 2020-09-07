@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>My Project: queue.h Source File</title>
+<title>My Project: dlist_void.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -79,29 +79,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">queue.h</div>  </div>
+<div class="title">dlist_void.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef __QUEUE_H__</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __QUEUE_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef __DLIST_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __DLIST_H__</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;error.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;node.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structqueue__s.html">queue_s</a> <a class="code" href="structqueue__s.html">queue_t</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structqueue__s.html">   14</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structqueue__s.html">queue_s</a>{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* rear; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structqueue__s.html#acea675d80d267dea0c72a9aa9ac09658">   16</a></span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* <a class="code" href="structqueue__s.html#acea675d80d267dea0c72a9aa9ac09658">front</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<a class="code" href="structqueue__s.html">queue_t</a>* queue_init();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> queue_destroy();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structqueue__s_html_acea675d80d267dea0c72a9aa9ac09658"><div class="ttname"><a href="structqueue__s.html#acea675d80d267dea0c72a9aa9ac09658">queue_s::front</a></div><div class="ttdeci">node_t * front</div><div class="ttdoc">rear where node is pushed. </div><div class="ttdef"><b>Definition:</b> queue.h:16</div></div>
-<div class="ttc" id="structqueue__s_html"><div class="ttname"><a href="structqueue__s.html">queue_s</a></div><div class="ttdoc">struct for queue </div><div class="ttdef"><b>Definition:</b> queue.h:14</div></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;string.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structdlist__s.html">dlist_s</a> <a class="code" href="structdlist__s.html">dlist_t</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structdlist__s.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structdlist__s.html">dlist_s</a>{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* head;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* tail;   </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="structdlist__s.html">dlist_t</a>* dlist_init();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> dlist_destroy(<a class="code" href="structdlist__s.html">dlist_t</a>* dlist);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="structnode__s.html">node_t</a>* dlist_get_head(<a class="code" href="structdlist__s.html">dlist_t</a>* dlist);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<a class="code" href="structnode__s.html">node_t</a>* dlist_get_tail(<a class="code" href="structdlist__s.html">dlist_t</a>* dlist);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> dlist_set_head(<a class="code" href="structdlist__s.html">dlist_t</a>* dlist, <a class="code" href="structnode__s.html">node_t</a>* node);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">int</span> dlist_set_tail(<a class="code" href="structdlist__s.html">dlist_t</a>* dlist, <a class="code" href="structnode__s.html">node_t</a>* node);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> dlist_clear_dlist(<a class="code" href="structdlist__s.html">dlist_t</a>* dlist);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="structnode__s_html"><div class="ttname"><a href="structnode__s.html">node_s</a></div><div class="ttdef"><b>Definition:</b> node.h:12</div></div>
+<div class="ttc" id="structdlist__s_html"><div class="ttname"><a href="structdlist__s.html">dlist_s</a></div><div class="ttdef"><b>Definition:</b> dlist_void.h:11</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

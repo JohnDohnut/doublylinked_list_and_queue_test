@@ -1,5 +1,12 @@
 #include "test.h"
-
+/*!
+*@mainpage Doubly Linked List and Queue Test
+*이중 연결 리스트와 큐를 테스트하기 위한 프로그램
+*@section intro_sec 내용
+*이중 연결 리스트와 큐의 기본적인 함수(노드의 삽입/삭제, 이중연결리스트의 탐색, 큐의 enqueue, dequeue등)와
+*편의를 위한 merge 함수의 테스트
+*
+*/
 int main(){
 	int i = 0;
 	int rv = NO_ERR;

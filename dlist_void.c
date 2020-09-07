@@ -87,19 +87,39 @@ node_t* dlist_get_tail(dlist_t* dlist){
 		return NULL;
 	return dlist->tail;
 }
-
+/**
+*@fn int dlist_set_head(dlist_t* dlist, node_t* node)
+*@brief setter for dlist head
+*@param dlist_t*
+*@param node_t*
+*@return int
+**/
 int dlist_set_head(dlist_t* dlist, node_t* node){
 	if(dlist == NULL)
 		return PARAM_NULL;
 	dlist->head = node;
 	return 0;	
 }
+/**
+*@fn int dlist_set_tail(dlist_t* dlist, node_t* node)
+*@brief setter for dlist tail
+*@param dlist_t*
+*@param node_t*
+*@return int
+*/
 int dlist_set_tail(dlist_t* dlist, node_t* node){
 	if(dlist ==NULL)
 		return PARAM_NULL;
 	dlist->tail = node;
 	return 0;
 }
+/**
+*@fn int dlist_delete_node(dlist_t* dlist, node_t*node)
+*@brief delete node from dlist
+*@param dlist_t*
+*@param node_t*
+*@return int
+*/
 int dlist_delete_node(dlist_t* dlist, node_t*node){
 	if(dlist == NULL)
 		return PARAM_NULL;
@@ -323,42 +343,5 @@ void dlist_print_dlist(dlist_t* dlist){
 	printf("\n");
 
 }
-/**
-*@section dlist Doubly Linked List
-*test code for init => add node => merge dlist => destroy
-*Head and tail nodes are dummy node, which is indicated by is_dummy member variable of struct node_s.
-*/
-/*
-int main(int argc, char* argv[]){
-	dlist_t* dlist = dlist_init();
-	int i=0;
-	char* s[20];
-	node_t* node[20];
-	for(i=0;i<10;i++){
-		s[i] = malloc(5);
-		if(i%2 == 0){
-			strncpy(s[i],"a",5);		
-		}
-		else{
-			strncpy(s[i],"b",5);
-		}
-		node[i] = node_init();
-		node[i] -> data = s[i];
-		node[i]->data_size = 5;
-		dlist_insert_node_to_head(dlist, node[i]);			
-	}
-	printf("ErrCode : %d\n", dlist_insert_node_to_head(dlist,NULL));
-	printf("ErrCode : %d\n", dlist_insert_node_to_head(NULL, NULL));
-	printf("dlist[1] : %p\n", dlist->head->next);
-	printf("data search : %p\n", dlist_search_node_by_data_from_head(dlist,s[0],5));
-	printf("dlist[-1] : %p\n", dlist->tail->prev);
-	printf("data search : %p\n", dlist_search_node_by_data_from_tail(dlist,s[0],5));
-	dlist_print_dlist(dlist);
-	dlist_destroy(dlist);
-	return 0;
-}
-*/
-
-
 
 

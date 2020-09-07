@@ -5,40 +5,32 @@
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \hyperlink{queue_8c_af17afaf2a8ad8b203d0fa900f55a489c}{queue\-\_\-check\-\_\-consistency} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue)
+int \hyperlink{queue_8c_af17afaf2a8ad8b203d0fa900f55a489c}{queue\-\_\-check\-\_\-consistency} (queue\-\_\-t $\ast$queue)
 \begin{DoxyCompactList}\small\item\em check consistency of queue \end{DoxyCompactList}\item 
-\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$ \hyperlink{queue_8c_a5ee725516e012934ca0be0c4e233d4ae}{queue\-\_\-init} ()
+queue\-\_\-t $\ast$ \hyperlink{queue_8c_ad72dfe852272efc3fb2ee38bc3c6d010}{queue\-\_\-init} ()
 \begin{DoxyCompactList}\small\item\em initialize queue \end{DoxyCompactList}\item 
-int \hyperlink{queue_8c_a9128398978898e62076780f3e8e7e52f}{queue\-\_\-push} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue, \hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$node)
+int \hyperlink{queue_8c_aa0d6c427fd03870befb1c651c2fe1628}{queue\-\_\-enqueue} (queue\-\_\-t $\ast$queue, node\-\_\-t $\ast$node)
 \begin{DoxyCompactList}\small\item\em push node to queue \end{DoxyCompactList}\item 
-\hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$ \hyperlink{queue_8c_ac8c020fd4950c85a1391aa2cd2b4d111}{queue\-\_\-peek} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue)
+node\-\_\-t $\ast$ \hyperlink{queue_8c_ac8c020fd4950c85a1391aa2cd2b4d111}{queue\-\_\-peek} (queue\-\_\-t $\ast$queue)
 \begin{DoxyCompactList}\small\item\em peek queue \end{DoxyCompactList}\item 
-\hyperlink{node_8h_a33b99e5345d46cf63926673aa2b9ff83}{node\-\_\-t} $\ast$ \hyperlink{queue_8c_a7b3769b16f550b78a7070ff0736544f6}{queue\-\_\-pop} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue)
-\begin{DoxyCompactList}\small\item\em pop node from queue \end{DoxyCompactList}\item 
-int \hyperlink{queue_8c_a4198ce0ca91b3c5f3d276d3550354196}{queue\-\_\-destroy} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue)
-\begin{DoxyCompactList}\small\item\em destroy queue and all its nodes \end{DoxyCompactList}\item 
-\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$ \hyperlink{queue_8c_aaa3907e8ce02f2cc1449fbe7ddccef5a}{queue\-\_\-add\-\_\-test\-\_\-node} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue, int add)
+node\-\_\-t $\ast$ \hyperlink{queue_8c_a2cbfa469bf98d27812c025b64ad6a569}{queue\-\_\-dequeue} (queue\-\_\-t $\ast$queue)
 \item 
-void \hyperlink{queue_8c_a46b67855281efd0d2a88cc39f3aa017e}{queue\-\_\-print\-\_\-queue} (\hyperlink{queue_8h_a1f77538d8a03d04921fd0ef2aefc7250}{queue\-\_\-t} $\ast$queue)
+int \hyperlink{queue_8c_a4198ce0ca91b3c5f3d276d3550354196}{queue\-\_\-destroy} (queue\-\_\-t $\ast$queue)
+\begin{DoxyCompactList}\small\item\em destroy queue and all its nodes \end{DoxyCompactList}\item 
+queue\-\_\-t $\ast$ \hyperlink{queue_8c_aaa3907e8ce02f2cc1449fbe7ddccef5a}{queue\-\_\-add\-\_\-test\-\_\-node} (queue\-\_\-t $\ast$queue, int add)
+\item 
+void \hyperlink{queue_8c_a46b67855281efd0d2a88cc39f3aa017e}{queue\-\_\-print\-\_\-queue} (queue\-\_\-t $\ast$queue)
 \begin{DoxyCompactList}\small\item\em print queue \end{DoxyCompactList}\item 
-int \hyperlink{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
-\end{DoxyCompactItemize}
+queue\-\_\-t $\ast$ \hyperlink{queue_8c_a5f20618fbbeaa0c3093d9233d8540027}{queue\-\_\-merge\-\_\-queue} (queue\-\_\-t $\ast$front\-\_\-queue, queue\-\_\-t $\ast$rear\-\_\-queue)
+\begin{DoxyCompactList}\small\item\em merge two queues \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Function Documentation}
-\hypertarget{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{\index{queue.\-c@{queue.\-c}!main@{main}}
-\index{main@{main}!queue.c@{queue.\-c}}
-\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)}}\label{queue_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}
-C doubly linked list and queue test \hypertarget{queue_8c_queue_section}{}\subsection{Queue}\label{queue_8c_queue_section}
-test code for init =$>$ push =$>$ pop =$>$ destroy \hypertarget{queue_8c_aaa3907e8ce02f2cc1449fbe7ddccef5a}{\index{queue.\-c@{queue.\-c}!queue\-\_\-add\-\_\-test\-\_\-node@{queue\-\_\-add\-\_\-test\-\_\-node}}
+\hypertarget{queue_8c_aaa3907e8ce02f2cc1449fbe7ddccef5a}{\index{queue.\-c@{queue.\-c}!queue\-\_\-add\-\_\-test\-\_\-node@{queue\-\_\-add\-\_\-test\-\_\-node}}
 \index{queue\-\_\-add\-\_\-test\-\_\-node@{queue\-\_\-add\-\_\-test\-\_\-node}!queue.c@{queue.\-c}}
-\subsubsection[{queue\-\_\-add\-\_\-test\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}{\bf queue\-\_\-t}$\ast$ queue\-\_\-add\-\_\-test\-\_\-node (
+\subsubsection[{queue\-\_\-add\-\_\-test\-\_\-node}]{\setlength{\rightskip}{0pt plus 5cm}queue\-\_\-t$\ast$ queue\-\_\-add\-\_\-test\-\_\-node (
 \begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue, }
+\item[{queue\-\_\-t $\ast$}]{queue, }
 \item[{int}]{add}
 \end{DoxyParamCaption}
 )}}\label{queue_8c_aaa3907e8ce02f2cc1449fbe7ddccef5a}
@@ -46,7 +38,7 @@ test code for init =$>$ push =$>$ pop =$>$ destroy \hypertarget{queue_8c_aaa3907
 \index{queue\-\_\-check\-\_\-consistency@{queue\-\_\-check\-\_\-consistency}!queue.c@{queue.\-c}}
 \subsubsection[{queue\-\_\-check\-\_\-consistency}]{\setlength{\rightskip}{0pt plus 5cm}int queue\-\_\-check\-\_\-consistency (
 \begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue}
+\item[{queue\-\_\-t $\ast$}]{queue}
 \end{DoxyParamCaption}
 )}}\label{queue_8c_af17afaf2a8ad8b203d0fa900f55a489c}
 
@@ -61,11 +53,18 @@ check consistency of queue
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
+\hypertarget{queue_8c_a2cbfa469bf98d27812c025b64ad6a569}{\index{queue.\-c@{queue.\-c}!queue\-\_\-dequeue@{queue\-\_\-dequeue}}
+\index{queue\-\_\-dequeue@{queue\-\_\-dequeue}!queue.c@{queue.\-c}}
+\subsubsection[{queue\-\_\-dequeue}]{\setlength{\rightskip}{0pt plus 5cm}node\-\_\-t$\ast$ queue\-\_\-dequeue (
+\begin{DoxyParamCaption}
+\item[{queue\-\_\-t $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a2cbfa469bf98d27812c025b64ad6a569}
 \hypertarget{queue_8c_a4198ce0ca91b3c5f3d276d3550354196}{\index{queue.\-c@{queue.\-c}!queue\-\_\-destroy@{queue\-\_\-destroy}}
 \index{queue\-\_\-destroy@{queue\-\_\-destroy}!queue.c@{queue.\-c}}
 \subsubsection[{queue\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}int queue\-\_\-destroy (
 \begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue}
+\item[{queue\-\_\-t $\ast$}]{queue}
 \end{DoxyParamCaption}
 )}}\label{queue_8c_a4198ce0ca91b3c5f3d276d3550354196}
 
@@ -80,82 +79,14 @@ destroy queue and all its nodes
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
-\hypertarget{queue_8c_a5ee725516e012934ca0be0c4e233d4ae}{\index{queue.\-c@{queue.\-c}!queue\-\_\-init@{queue\-\_\-init}}
-\index{queue\-\_\-init@{queue\-\_\-init}!queue.c@{queue.\-c}}
-\subsubsection[{queue\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf queue\-\_\-t}$\ast$ queue\-\_\-init (
+\hypertarget{queue_8c_aa0d6c427fd03870befb1c651c2fe1628}{\index{queue.\-c@{queue.\-c}!queue\-\_\-enqueue@{queue\-\_\-enqueue}}
+\index{queue\-\_\-enqueue@{queue\-\_\-enqueue}!queue.c@{queue.\-c}}
+\subsubsection[{queue\-\_\-enqueue}]{\setlength{\rightskip}{0pt plus 5cm}queue\-\_\-enqueue (
 \begin{DoxyParamCaption}
-{}
+\item[{queue\-\_\-t $\ast$}]{queue, }
+\item[{node\-\_\-t $\ast$}]{node}
 \end{DoxyParamCaption}
-)}}\label{queue_8c_a5ee725516e012934ca0be0c4e233d4ae}
-
-
-initialize queue 
-
-\begin{DoxyReturn}{Returns}
-queue\-\_\-t$\ast$ 
-\end{DoxyReturn}
-\hypertarget{queue_8c_ac8c020fd4950c85a1391aa2cd2b4d111}{\index{queue.\-c@{queue.\-c}!queue\-\_\-peek@{queue\-\_\-peek}}
-\index{queue\-\_\-peek@{queue\-\_\-peek}!queue.c@{queue.\-c}}
-\subsubsection[{queue\-\_\-peek}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\-\_\-t} $\ast$ queue\-\_\-peek (
-\begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue}
-\end{DoxyParamCaption}
-)}}\label{queue_8c_ac8c020fd4950c85a1391aa2cd2b4d111}
-
-
-peek queue 
-
-
-\begin{DoxyParams}{Parameters}
-{\em queue\-\_\-t$\ast$} & queue \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-node\-\_\-t$\ast$ 
-\end{DoxyReturn}
-\hypertarget{queue_8c_a7b3769b16f550b78a7070ff0736544f6}{\index{queue.\-c@{queue.\-c}!queue\-\_\-pop@{queue\-\_\-pop}}
-\index{queue\-\_\-pop@{queue\-\_\-pop}!queue.c@{queue.\-c}}
-\subsubsection[{queue\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf node\-\_\-t} $\ast$ queue\-\_\-pop (
-\begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue}
-\end{DoxyParamCaption}
-)}}\label{queue_8c_a7b3769b16f550b78a7070ff0736544f6}
-
-
-pop node from queue 
-
-
-\begin{DoxyParams}{Parameters}
-{\em queue\-\_\-t$\ast$} & queue \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-node\-\_\-t$\ast$ 
-\end{DoxyReturn}
-\hypertarget{queue_8c_a46b67855281efd0d2a88cc39f3aa017e}{\index{queue.\-c@{queue.\-c}!queue\-\_\-print\-\_\-queue@{queue\-\_\-print\-\_\-queue}}
-\index{queue\-\_\-print\-\_\-queue@{queue\-\_\-print\-\_\-queue}!queue.c@{queue.\-c}}
-\subsubsection[{queue\-\_\-print\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}void queue\-\_\-print\-\_\-queue (
-\begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue}
-\end{DoxyParamCaption}
-)}}\label{queue_8c_a46b67855281efd0d2a88cc39f3aa017e}
-
-
-print queue 
-
-
-\begin{DoxyParams}{Parameters}
-{\em queue\-\_\-t$\ast$} & queue \\
-\hline
-\end{DoxyParams}
-\hypertarget{queue_8c_a9128398978898e62076780f3e8e7e52f}{\index{queue.\-c@{queue.\-c}!queue\-\_\-push@{queue\-\_\-push}}
-\index{queue\-\_\-push@{queue\-\_\-push}!queue.c@{queue.\-c}}
-\subsubsection[{queue\-\_\-push}]{\setlength{\rightskip}{0pt plus 5cm}queue\-\_\-push (
-\begin{DoxyParamCaption}
-\item[{{\bf queue\-\_\-t} $\ast$}]{queue, }
-\item[{{\bf node\-\_\-t} $\ast$}]{node}
-\end{DoxyParamCaption}
-)}}\label{queue_8c_a9128398978898e62076780f3e8e7e52f}
+)}}\label{queue_8c_aa0d6c427fd03870befb1c651c2fe1628}
 
 
 push node to queue 
@@ -170,3 +101,74 @@ push node to queue
 \begin{DoxyReturn}{Returns}
 int 
 \end{DoxyReturn}
+\hypertarget{queue_8c_ad72dfe852272efc3fb2ee38bc3c6d010}{\index{queue.\-c@{queue.\-c}!queue\-\_\-init@{queue\-\_\-init}}
+\index{queue\-\_\-init@{queue\-\_\-init}!queue.c@{queue.\-c}}
+\subsubsection[{queue\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}queue\-\_\-init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_ad72dfe852272efc3fb2ee38bc3c6d010}
+
+
+initialize queue 
+
+\begin{DoxyReturn}{Returns}
+queue\-\_\-t$\ast$ 
+\end{DoxyReturn}
+\hypertarget{queue_8c_a5f20618fbbeaa0c3093d9233d8540027}{\index{queue.\-c@{queue.\-c}!queue\-\_\-merge\-\_\-queue@{queue\-\_\-merge\-\_\-queue}}
+\index{queue\-\_\-merge\-\_\-queue@{queue\-\_\-merge\-\_\-queue}!queue.c@{queue.\-c}}
+\subsubsection[{queue\-\_\-merge\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}queue\-\_\-t $\ast$ queue\-\_\-merge\-\_\-queue (
+\begin{DoxyParamCaption}
+\item[{queue\-\_\-t $\ast$}]{front\-\_\-queue, }
+\item[{queue\-\_\-t $\ast$}]{rear\-\_\-queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a5f20618fbbeaa0c3093d9233d8540027}
+
+
+merge two queues 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue\-\_\-t$\ast$} & \\
+\hline
+{\em queue\-\_\-t$\ast$} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+queue\-\_\-t$\ast$ 
+\end{DoxyReturn}
+\hypertarget{queue_8c_ac8c020fd4950c85a1391aa2cd2b4d111}{\index{queue.\-c@{queue.\-c}!queue\-\_\-peek@{queue\-\_\-peek}}
+\index{queue\-\_\-peek@{queue\-\_\-peek}!queue.c@{queue.\-c}}
+\subsubsection[{queue\-\_\-peek}]{\setlength{\rightskip}{0pt plus 5cm}node\-\_\-t $\ast$ queue\-\_\-peek (
+\begin{DoxyParamCaption}
+\item[{queue\-\_\-t $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_ac8c020fd4950c85a1391aa2cd2b4d111}
+
+
+peek queue 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue\-\_\-t$\ast$} & queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+node\-\_\-t$\ast$ 
+\end{DoxyReturn}
+\hypertarget{queue_8c_a46b67855281efd0d2a88cc39f3aa017e}{\index{queue.\-c@{queue.\-c}!queue\-\_\-print\-\_\-queue@{queue\-\_\-print\-\_\-queue}}
+\index{queue\-\_\-print\-\_\-queue@{queue\-\_\-print\-\_\-queue}!queue.c@{queue.\-c}}
+\subsubsection[{queue\-\_\-print\-\_\-queue}]{\setlength{\rightskip}{0pt plus 5cm}void queue\-\_\-print\-\_\-queue (
+\begin{DoxyParamCaption}
+\item[{queue\-\_\-t $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{queue_8c_a46b67855281efd0d2a88cc39f3aa017e}
+
+
+print queue 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue\-\_\-t$\ast$} & queue \\
+\hline
+\end{DoxyParams}

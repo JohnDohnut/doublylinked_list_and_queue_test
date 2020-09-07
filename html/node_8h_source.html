@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>C Doubly linked list and queue test: node.h Source File</title>
+<title>My Project: node.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">C Doubly linked list and queue test
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -60,7 +60,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>File&#160;List</span></a></li>
-      <li><a href="globals.html"><span>File&#160;Members</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -69,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -83,32 +82,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">node.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="node_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __NODE_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="node_8h.html#a4515d9d03b2434a36fbf82c2c285087b">    2</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __NODE_H_</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;memory.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;error.h&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="node_8h.html#a33b99e5345d46cf63926673aa2b9ff83">    9</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnode__s.html">node_s</a> <a class="code" href="structnode__s.html">node_t</a>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structnode__s.html">   10</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnode__s.html">node_s</a>{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structnode__s.html#a9eeca3bba8c141ccc40edb205d898c5a">   11</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structnode__s.html#a9eeca3bba8c141ccc40edb205d898c5a">data</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structnode__s.html#af63f2c2c1d16037022a14eacd1abf713">   12</a></span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* <a class="code" href="structnode__s.html#af63f2c2c1d16037022a14eacd1abf713">prev</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structnode__s.html#a5a6b703d87cda099a7dc7dc1dbcae9d7">   13</a></span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* <a class="code" href="structnode__s.html#a5a6b703d87cda099a7dc7dc1dbcae9d7">next</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structnode__s.html#aa299569154c5d785262de31caf489f84">   14</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structnode__s.html#aa299569154c5d785262de31caf489f84">is_dummy</a>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<a class="code" href="structnode__s.html">node_t</a>* <a class="code" href="node_8h.html#ad92f768c29e69286f75277d1c66a1f1c">node_init</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> <a class="code" href="node_8h.html#aade3ed4a3b24ce4af632d38e61c73d8a">node_destroy</a>(<a class="code" href="structnode__s.html">node_t</a>* node);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="structnode__s_html_a5a6b703d87cda099a7dc7dc1dbcae9d7"><div class="ttname"><a href="structnode__s.html#a5a6b703d87cda099a7dc7dc1dbcae9d7">node_s::next</a></div><div class="ttdeci">node_t * next</div><div class="ttdef"><b>Definition:</b> node.h:13</div></div>
-<div class="ttc" id="node_8h_html_aade3ed4a3b24ce4af632d38e61c73d8a"><div class="ttname"><a href="node_8h.html#aade3ed4a3b24ce4af632d38e61c73d8a">node_destroy</a></div><div class="ttdeci">int node_destroy(node_t *node)</div><div class="ttdef"><b>Definition:</b> node.c:12</div></div>
-<div class="ttc" id="structnode__s_html_af63f2c2c1d16037022a14eacd1abf713"><div class="ttname"><a href="structnode__s.html#af63f2c2c1d16037022a14eacd1abf713">node_s::prev</a></div><div class="ttdeci">node_t * prev</div><div class="ttdef"><b>Definition:</b> node.h:12</div></div>
-<div class="ttc" id="structnode__s_html_a9eeca3bba8c141ccc40edb205d898c5a"><div class="ttname"><a href="structnode__s.html#a9eeca3bba8c141ccc40edb205d898c5a">node_s::data</a></div><div class="ttdeci">int data</div><div class="ttdef"><b>Definition:</b> node.h:11</div></div>
-<div class="ttc" id="node_8h_html_ad92f768c29e69286f75277d1c66a1f1c"><div class="ttname"><a href="node_8h.html#ad92f768c29e69286f75277d1c66a1f1c">node_init</a></div><div class="ttdeci">node_t * node_init()</div><div class="ttdef"><b>Definition:</b> node.c:3</div></div>
-<div class="ttc" id="structnode__s_html_aa299569154c5d785262de31caf489f84"><div class="ttname"><a href="structnode__s.html#aa299569154c5d785262de31caf489f84">node_s::is_dummy</a></div><div class="ttdeci">int is_dummy</div><div class="ttdef"><b>Definition:</b> node.h:14</div></div>
-<div class="ttc" id="structnode__s_html"><div class="ttname"><a href="structnode__s.html">node_s</a></div><div class="ttdef"><b>Definition:</b> node.h:10</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#ifndef __NODE_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __NODE_H_</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;memory.h&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;error.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;test_memcmp.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structnode__s.html">node_s</a> <a class="code" href="structnode__s.html">node_t</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structnode__s.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnode__s.html">node_s</a>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> is_dummy; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structnode__s.html#ae97adf7c1d652aa8b4fe84cbcdcaea9b">   14</a></span>&#160;    <span class="keywordtype">void</span>* <a class="code" href="structnode__s.html#ae97adf7c1d652aa8b4fe84cbcdcaea9b">data</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> data_size;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* prev;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="structnode__s.html">node_t</a>* next;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<a class="code" href="structnode__s.html">node_t</a>* node_init();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> node_destroy(<a class="code" href="structnode__s.html">node_t</a>* node);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="structnode__s_html"><div class="ttname"><a href="structnode__s.html">node_s</a></div><div class="ttdef"><b>Definition:</b> node.h:12</div></div>
+<div class="ttc" id="structnode__s_html_ae97adf7c1d652aa8b4fe84cbcdcaea9b"><div class="ttname"><a href="structnode__s.html#ae97adf7c1d652aa8b4fe84cbcdcaea9b">node_s::data</a></div><div class="ttdeci">void * data</div><div class="ttdoc">indicates if the node is a dummy node for head and tail node for dlist and rear node for queue ...</div><div class="ttdef"><b>Definition:</b> node.h:14</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
