@@ -180,7 +180,7 @@ void queue_print_queue(queue_t* queue){
 	node_t* curr_node = queue->front;
 	while(curr_node != NULL){
 		if(curr_node == queue->front){
-			printf("front | %d ",curr_node->data);
+			printf("\nfront | %d ",curr_node->data);
 		}
 		
 		else{
@@ -190,43 +190,40 @@ void queue_print_queue(queue_t* queue){
 	}
 	printf(" | rear\n");
 }
-
-
 /**
-*@mainpapge C doubly linked list and queue test
-*@section queue_section Queue
-*test code for init => push => pop => destroy
+*@fn queue_t* queue_merge_queue(queue_t* front_queue, queue_t* rear_queue)
+*@brief merge two queues
+*@param queue_t*
+*@param queue_t* 
+*@return queue_t*
 */
-int main(){
-
-	queue_t* queue = queue_init();
-	node_t* node = node_init();
-	node_set_data(node,(void *)(123));
-	queue_enqueue(queue,node);
-	node = node_init();
-	node_set_data(node,(void *)(456));
-	queue_enqueue(queue, node);
-	node = node_init();
-	node_set_data(node,(void *)(789));
-	queue_enqueue(queue,node);
-	printf("%d | %d | %d\n",queue->front, queue->front->next ,queue->rear);
-	queue_print_queue(queue);
-	printf("%d \n", (node = queue_dequeue(queue)) -> data);
-	node_destroy(node);
-	queue_print_queue(queue);
-	queue_t* bulk = queue_init();	
-	queue_add_test_node(bulk,50);
-	queue_print_queue(bulk);
-	int j;
-	for (j=0; j<50;j++){
-		node_t* dequeue_node;
-		printf(" %d ", (dequeue_node = queue_dequeue(bulk))->data);
-		node_destroy(dequeue_node);
+queue_t* queue_merge_queue(queue_t* front_queue, queue_t* rear_queue){
+	if(front_queue == NULL || rear_queue == NULL){
+		return NULL;
 	}
+	if(queue_check_consistency(front_queue) != NO_ERR || queue_check_consistency(rear_queue) != NO_ERR){
+		printf("	! merge queue inconsistent\n");
+		return NULL;
+	}
+	if(front_queue->front == NULL && front_queue->rear ==NULL){
+		free(front_queue);
+		return rear_queue;	
+	}
+	else if(rear_queue->front == NULL && rear_queue->rear == NULL){
+		free(rear_queue);
+		return front_queue;
+	}
+	queue_t* new_queue = queue_init();
+	new_queue->front = front_queue->front;
+	new_queue->rear = rear_queue->rear;
+	front_queue->rear->next = rear_queue->front;
+	rear_queue->front->prev = front_queue->rear;
+	free(front_queue);
+	free(rear_queue);
+	return new_queue;
 	
-	printf("\n");
-	return 0;
 }
+
 
 
 

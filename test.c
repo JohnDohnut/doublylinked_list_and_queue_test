@@ -1,4 +1,4 @@
-#include "dlist_void.h"
+#include "test.h"
 
 int main(){
 	int i = 0;
@@ -190,6 +190,72 @@ int main(){
 		printf("dlist_swap_node, rv : %d\n",rv);
 	dlist_print_dlist(new_dlist);
 	
+	
+	node_t* node;
+
+	void *rv_ptr;
+	queue_t* queue = queue_init();
+	if(queue == NULL){
+		printf("init failed\n");
+		return -1;	
+	}
+	node = node_init();
+	///enqueue test
+	rv = node_set_data(node,(void *)(123));
+	rv = queue_enqueue(queue,node);
+	if(rv != NO_ERR){
+		printf("enqueue failed errno : %d\n",rv);
+	}
+	node = node_init();
+	node_set_data(node,(void *)(456));
+	rv = queue_enqueue(queue, node);
+	if(rv != NO_ERR){
+		printf("enqueue failed errno : %d\n",rv);
+	}
+	node = node_init();
+	node_set_data(node,(void *)(789));
+	rv = queue_enqueue(queue,node);
+	if(rv != NO_ERR){
+		printf("enqueue failed errno : %d\n",rv);
+	}
+	rv = queue_enqueue(queue,NULL);
+	if(rv != NO_ERR){
+		printf("enqueue successed, node is NULL errno : %d\n",rv);
+	}
+
+	rv = queue_enqueue(NULL,node);
+	if(rv != NO_ERR){
+		printf("enqueue successed, queue is NULL errno : %d\n",rv);
+	}
+
+	printf("%d | %d | %d\n",queue->front, queue->front->next ,queue->rear);
+	queue_print_queue(queue);
+	
+	///dequeue test
+	printf("%d \n", (node = queue_dequeue(queue)) -> data);
+	node_destroy(node);
+	queue_print_queue(queue);
+	queue_t* bulk = queue_init();	
+	if(bulk == NULL){
+		printf("init failed \n");
+		return -1;
+	}
+	queue_add_test_node(bulk,50);
+	rv_ptr = queue_print_queue(bulk);
+	int j;
+	for (j=0; j<25;j++){
+		node_t* dequeue_node;
+		printf(" %d ", (dequeue_node = queue_dequeue(bulk))->data);
+		node_destroy(dequeue_node);
+	}
+	queue_print_queue(bulk);
+	//merge test
+	queue_t* merged_queue = queue_merge_queue(queue,bulk);	
+	printf("merged front : %d\n",merged_queue->front->data);
+	queue_print_queue(merged_queue);
+	queue_destroy(merged_queue);
+	printf("\n");
+	return 0;
 
 }
 
